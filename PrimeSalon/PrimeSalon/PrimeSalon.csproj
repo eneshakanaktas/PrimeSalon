@@ -1,0 +1,762 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CFC64D92-ADF2-49F4-8495-1AFABA6B6A21}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PrimeSalon</RootNamespace>
+    <AssemblyName>PrimeSalon</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>PrimeSalon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DemirbaslarRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemirbaslarRaporu.Designer.cs">
+      <DependentUpon>DemirbaslarRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAnaMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAnaMenu.Designer.cs">
+      <DependentUpon>FrmAnaMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDemirbaslar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDemirbaslar.Designer.cs">
+      <DependentUpon>FrmDemirbaslar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDemirbaslarGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDemirbaslarGuncelle.Designer.cs">
+      <DependentUpon>FrmDemirbaslarGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDemirbaslarKategoriTanimlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDemirbaslarKategoriTanimlama.Designer.cs">
+      <DependentUpon>FrmDemirbaslarKategoriTanimlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDemirbaslarSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDemirbaslarSil.Designer.cs">
+      <DependentUpon>FrmDemirbaslarSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDemirbaslarSorgulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDemirbaslarSorgulama.Designer.cs">
+      <DependentUpon>FrmDemirbaslarSorgulama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGiderler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGiderler.Designer.cs">
+      <DependentUpon>FrmGiderler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGiderlerGiderTuruTanimlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGiderlerGiderTuruTanimlama.Designer.cs">
+      <DependentUpon>FrmGiderlerGiderTuruTanimlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGiderlerGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGiderlerGuncelle.Designer.cs">
+      <DependentUpon>FrmGiderlerGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGiderlerSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGiderlerSil.Designer.cs">
+      <DependentUpon>FrmGiderlerSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGiderlerSorgulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGiderlerSorgulama.Designer.cs">
+      <DependentUpon>FrmGiderlerSorgulama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHizmet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHizmet.Designer.cs">
+      <DependentUpon>FrmHizmet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHizmetGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHizmetGuncelle.Designer.cs">
+      <DependentUpon>FrmHizmetGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHizmetKategoriTanimlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHizmetKategoriTanimlama.Designer.cs">
+      <DependentUpon>FrmHizmetKategoriTanimlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHizmetSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHizmetSil.Designer.cs">
+      <DependentUpon>FrmHizmetSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHizmetSorgulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHizmetSorgulama.Designer.cs">
+      <DependentUpon>FrmHizmetSorgulama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIzinPuantajGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIzinPuantajGuncelle.Designer.cs">
+      <DependentUpon>FrmIzinPuantajGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIzinPuantajIzinTuruTanimlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIzinPuantajIzinTuruTanimlama.Designer.cs">
+      <DependentUpon>FrmIzinPuantajIzinTuruTanimlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIzinPuantajSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIzinPuantajSil.Designer.cs">
+      <DependentUpon>FrmIzinPuantajSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIzinPuantaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIzinPuantaj.Designer.cs">
+      <DependentUpon>FrmIzinPuantaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIzinPuantajSorgulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIzinPuantajSorgulama.Designer.cs">
+      <DependentUpon>FrmIzinPuantajSorgulama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKasaHareketleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKasaHareketleri.Designer.cs">
+      <DependentUpon>FrmKasaHareketleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKasaHareketleriGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKasaHareketleriGuncelle.Designer.cs">
+      <DependentUpon>FrmKasaHareketleriGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKasaHareketleriSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKasaHareketleriSil.Designer.cs">
+      <DependentUpon>FrmKasaHareketleriSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKasaHareketleriSorgulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKasaHareketleriSorgulama.Designer.cs">
+      <DependentUpon>FrmKasaHareketleriSorgulama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMusteri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMusteri.Designer.cs">
+      <DependentUpon>FrmMusteri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMusteriGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMusteriGuncelle.Designer.cs">
+      <DependentUpon>FrmMusteriGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMusteriSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMusteriSil.Designer.cs">
+      <DependentUpon>FrmMusteriSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMusteriSorgulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMusteriSorgulama.Designer.cs">
+      <DependentUpon>FrmMusteriSorgulama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMuhasebeStokIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMuhasebeStokIslemleri.Designer.cs">
+      <DependentUpon>FrmMuhasebeStokIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPersonel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPersonel.Designer.cs">
+      <DependentUpon>FrmPersonel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPersonelGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPersonelGuncelle.Designer.cs">
+      <DependentUpon>FrmPersonelGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPersonelPozisyonTanimlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPersonelPozisyonTanimlama.Designer.cs">
+      <DependentUpon>FrmPersonelPozisyonTanimlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPersonelSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPersonelSil.Designer.cs">
+      <DependentUpon>FrmPersonelSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPersonelSorgulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPersonelSorgulama.Designer.cs">
+      <DependentUpon>FrmPersonelSorgulama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRandevu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRandevu.Designer.cs">
+      <DependentUpon>FrmRandevu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRandevuGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRandevuGuncelle.Designer.cs">
+      <DependentUpon>FrmRandevuGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRandevuSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRandevuSil.Designer.cs">
+      <DependentUpon>FrmRandevuSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRandevuSorgulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRandevuSorgulama.Designer.cs">
+      <DependentUpon>FrmRandevuSorgulama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSatislar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSatislar.Designer.cs">
+      <DependentUpon>FrmSatislar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSatislarGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSatislarGuncelle.Designer.cs">
+      <DependentUpon>FrmSatislarGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSatislarSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSatislarSil.Designer.cs">
+      <DependentUpon>FrmSatislarSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSatislarSorgulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSatislarSorgulama.Designer.cs">
+      <DependentUpon>FrmSatislarSorgulama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStokHareketleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStokHareketleri.Designer.cs">
+      <DependentUpon>FrmStokHareketleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStokHareketleriGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStokHareketleriGuncelle.Designer.cs">
+      <DependentUpon>FrmStokHareketleriGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStokHareketleriSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStokHareketleriSil.Designer.cs">
+      <DependentUpon>FrmStokHareketleriSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStokHareketleriSorgulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStokHareketleriSorgulama.Designer.cs">
+      <DependentUpon>FrmStokHareketleriSorgulama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTedarikciler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTedarikciler.Designer.cs">
+      <DependentUpon>FrmTedarikciler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTedarikcilerGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTedarikcilerGuncelle.Designer.cs">
+      <DependentUpon>FrmTedarikcilerGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTedarikcilerSehirTanimlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTedarikcilerSehirTanimlama.Designer.cs">
+      <DependentUpon>FrmTedarikcilerSehirTanimlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTedarikcilerSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTedarikcilerSil.Designer.cs">
+      <DependentUpon>FrmTedarikcilerSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTedarikcilerSorgulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTedarikcilerSorgulama.Designer.cs">
+      <DependentUpon>FrmTedarikcilerSorgulama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUrunler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUrunler.Designer.cs">
+      <DependentUpon>FrmUrunler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUrunlerGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUrunlerGuncelle.Designer.cs">
+      <DependentUpon>FrmUrunlerGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUrunlerKategoriTanimlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUrunlerKategoriTanimlama.Designer.cs">
+      <DependentUpon>FrmUrunlerKategoriTanimlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUrunlerSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUrunlerSil.Designer.cs">
+      <DependentUpon>FrmUrunlerSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUrunlerSorgulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUrunlerSorgulama.Designer.cs">
+      <DependentUpon>FrmUrunlerSorgulama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiderlerRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiderlerRaporu.Designer.cs">
+      <DependentUpon>GiderlerRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IzinRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzinRaporu.Designer.cs">
+      <DependentUpon>IzinRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KasaHareketleriRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KasaHareketleriRaporu.Designer.cs">
+      <DependentUpon>KasaHareketleriRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MuhasebeServisi.cs" />
+    <Compile Include="MusteriRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriRaporu.Designer.cs">
+      <DependentUpon>MusteriRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelRaporu.Designer.cs">
+      <DependentUpon>PersonelRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrimeSalonDB_PrimaryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrimeSalonDB_PrimaryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SatislarRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SatislarRaporu.Designer.cs">
+      <DependentUpon>SatislarRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="StokHareketleriRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokHareketleriRaporu.Designer.cs">
+      <DependentUpon>StokHareketleriRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TedarikciRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TedarikciRaporu.Designer.cs">
+      <DependentUpon>TedarikciRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UrunlerRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UrunlerRaporu.Designer.cs">
+      <DependentUpon>UrunlerRaporu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DemirbaslarRaporu.rdlc" />
+    <EmbeddedResource Include="DemirbaslarRaporu.resx">
+      <DependentUpon>DemirbaslarRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAnaMenu.resx">
+      <DependentUpon>FrmAnaMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDemirbaslar.resx">
+      <DependentUpon>FrmDemirbaslar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDemirbaslarGuncelle.resx">
+      <DependentUpon>FrmDemirbaslarGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDemirbaslarSil.resx">
+      <DependentUpon>FrmDemirbaslarSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDemirbaslarSorgulama.resx">
+      <DependentUpon>FrmDemirbaslarSorgulama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGiderler.resx">
+      <DependentUpon>FrmGiderler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGiderlerGiderTuruTanimlama.resx">
+      <DependentUpon>FrmGiderlerGiderTuruTanimlama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGiderlerGuncelle.resx">
+      <DependentUpon>FrmGiderlerGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGiderlerSil.resx">
+      <DependentUpon>FrmGiderlerSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGiderlerSorgulama.resx">
+      <DependentUpon>FrmGiderlerSorgulama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHizmet.resx">
+      <DependentUpon>FrmHizmet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHizmetGuncelle.resx">
+      <DependentUpon>FrmHizmetGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHizmetSil.resx">
+      <DependentUpon>FrmHizmetSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHizmetSorgulama.resx">
+      <DependentUpon>FrmHizmetSorgulama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIzinPuantajGuncelle.resx">
+      <DependentUpon>FrmIzinPuantajGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIzinPuantajSil.resx">
+      <DependentUpon>FrmIzinPuantajSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIzinPuantaj.resx">
+      <DependentUpon>FrmIzinPuantaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIzinPuantajSorgulama.resx">
+      <DependentUpon>FrmIzinPuantajSorgulama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKasaHareketleri.resx">
+      <DependentUpon>FrmKasaHareketleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKasaHareketleriGuncelle.resx">
+      <DependentUpon>FrmKasaHareketleriGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKasaHareketleriSil.resx">
+      <DependentUpon>FrmKasaHareketleriSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKasaHareketleriSorgulama.resx">
+      <DependentUpon>FrmKasaHareketleriSorgulama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMusteri.resx">
+      <DependentUpon>FrmMusteri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMusteriGuncelle.resx">
+      <DependentUpon>FrmMusteriGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMusteriSil.resx">
+      <DependentUpon>FrmMusteriSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMusteriSorgulama.resx">
+      <DependentUpon>FrmMusteriSorgulama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPersonel.resx">
+      <DependentUpon>FrmPersonel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPersonelGuncelle.resx">
+      <DependentUpon>FrmPersonelGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPersonelPozisyonTanimlama.resx">
+      <DependentUpon>FrmPersonelPozisyonTanimlama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPersonelSil.resx">
+      <DependentUpon>FrmPersonelSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPersonelSorgulama.resx">
+      <DependentUpon>FrmPersonelSorgulama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRandevu.resx">
+      <DependentUpon>FrmRandevu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRandevuGuncelle.resx">
+      <DependentUpon>FrmRandevuGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRandevuSil.resx">
+      <DependentUpon>FrmRandevuSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRandevuSorgulama.resx">
+      <DependentUpon>FrmRandevuSorgulama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSatislar.resx">
+      <DependentUpon>FrmSatislar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSatislarGuncelle.resx">
+      <DependentUpon>FrmSatislarGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSatislarSil.resx">
+      <DependentUpon>FrmSatislarSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSatislarSorgulama.resx">
+      <DependentUpon>FrmSatislarSorgulama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStokHareketleri.resx">
+      <DependentUpon>FrmStokHareketleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStokHareketleriGuncelle.resx">
+      <DependentUpon>FrmStokHareketleriGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStokHareketleriSil.resx">
+      <DependentUpon>FrmStokHareketleriSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStokHareketleriSorgulama.resx">
+      <DependentUpon>FrmStokHareketleriSorgulama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTedarikciler.resx">
+      <DependentUpon>FrmTedarikciler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTedarikcilerGuncelle.resx">
+      <DependentUpon>FrmTedarikcilerGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTedarikcilerSehirTanimlama.resx">
+      <DependentUpon>FrmTedarikcilerSehirTanimlama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTedarikcilerSil.resx">
+      <DependentUpon>FrmTedarikcilerSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTedarikcilerSorgulama.resx">
+      <DependentUpon>FrmTedarikcilerSorgulama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUrunler.resx">
+      <DependentUpon>FrmUrunler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUrunlerGuncelle.resx">
+      <DependentUpon>FrmUrunlerGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUrunlerSil.resx">
+      <DependentUpon>FrmUrunlerSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUrunlerSorgulama.resx">
+      <DependentUpon>FrmUrunlerSorgulama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiderlerRaporu.rdlc" />
+    <EmbeddedResource Include="GiderlerRaporu.resx">
+      <DependentUpon>GiderlerRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzinRaporu.resx">
+      <DependentUpon>IzinRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzınRaporu.rdlc" />
+    <EmbeddedResource Include="KasaHareketleriRaporu.rdlc" />
+    <EmbeddedResource Include="KasaHareketleriRaporu.resx">
+      <DependentUpon>KasaHareketleriRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriRaporu.resx">
+      <DependentUpon>MusteriRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelRaporu.resx">
+      <DependentUpon>PersonelRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PersonelRapor.rdlc" />
+    <EmbeddedResource Include="MusteriRaporu.rdlc" />
+    <EmbeddedResource Include="SatislarRaporu.rdlc" />
+    <EmbeddedResource Include="SatislarRaporu.resx">
+      <DependentUpon>SatislarRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokHareketleriRaporu.rdlc" />
+    <EmbeddedResource Include="StokHareketleriRaporu.resx">
+      <DependentUpon>StokHareketleriRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TedarikciRaporu.rdlc" />
+    <EmbeddedResource Include="TedarikciRaporu.resx">
+      <DependentUpon>TedarikciRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UrunlerRaporu.rdlc" />
+    <EmbeddedResource Include="UrunlerRaporu.resx">
+      <DependentUpon>UrunlerRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="PrimeSalonDB_PrimaryDataSet.xsc">
+      <DependentUpon>PrimeSalonDB_PrimaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PrimeSalonDB_PrimaryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrimeSalonDB_PrimaryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PrimeSalonDB_PrimaryDataSet.xss">
+      <DependentUpon>PrimeSalonDB_PrimaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PrimeSalon.ico" />
+    <Content Include="PrimeSalonDB_Primary.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PrimeSalonDB_Primary_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>PrimeSalonDB_Primary.mdf</DependentUpon>
+    </Content>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
